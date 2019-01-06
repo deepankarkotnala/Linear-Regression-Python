@@ -91,9 +91,10 @@ plt.show()
 
 ### R–squared value is the statistical measure to show how close the data are to the fitted regression line.
 R-squared does not indicate whether a regression model is adequate. We an have a low R-squared value for a good model, or a high R-squared value for a model that does not fit the data.
+![r-squared](https://github.com/deepankarkotnala/LinearRegressionPython/blob/master/r-squared.png)
+
 ### tot_sumofsq is the total sum of squares and res_sumofsq is the total sum of squares of residuals(relate them to the formula).
 
-![r-squared](https://github.com/deepankarkotnala/LinearRegressionPython/blob/master/r-squared.png)
 ```python
 tot_sumofsq = 0
 res_sumofsq = 0
