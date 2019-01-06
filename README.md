@@ -37,8 +37,10 @@ where x_bar = mean_x, and y_bar = mean_y
 numerator = 0
 denominator = 0
 for i in range(n):
+
     numerator   += (X[i] - mean_x) * (Y[i] - mean_y)
     denominator += (X[i] - mean_x) ** 2
+    
 m = numerator / denominator
 c = mean_y - (m * mean_x)
 
