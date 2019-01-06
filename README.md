@@ -98,7 +98,7 @@ for i in range(n): #n is the total number of values
     y_pred = c + m * X[i]
     tot_sumofsq += (Y[i] - mean_y) ** 2
     res_sumofsq += (Y[i] - y_pred) ** 2
-    r2 = 1 - (res_sumofsq/tot_sumofsq)
+r2 = 1 - (res_sumofsq/tot_sumofsq)
 print(r2)
 ```
 
