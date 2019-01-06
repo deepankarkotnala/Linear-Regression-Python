@@ -22,8 +22,8 @@ data.head()
 X = data['Head Size(cm^3)'].values
 Y = data['Brain Weight(grams)'].values
 ```
-# Equation of a line is given as: Y = mX + c
-# In order to find the values of m and c, we first need to calculate the mean of X and Y
+Equation of a line is given as: Y = mX + c
+In order to find the values of m and c, we first need to calculate the mean of X and Y
 ```python
 mean_x = np.mean(X)
 mean_y = np.mean(Y)
