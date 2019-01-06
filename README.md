@@ -1,0 +1,79 @@
+# Simple Linear Regression Using Python
+
+### Importing the required libraries
+%matplotlib inline
+import numpy as np
+import pandas as pd
+import matplotlib.pyplot as plt
+plt.rcParams['figure.figsize'] = (20.0, 10.0)
+ 
+### Reading Data
+data = pd.read_csv('D:\iiitB\Python\Linear Regression Python\headbrain.csv')
+print(data.shape)
+data.head()
+
+      Gender	 Age Range	 Head Size(cm^3)	Brain Weight(grams)
+0	       1	         1	            4512	          1530
+1	       1	         1	            3738	          1297
+2	       1	         1	            4261	          1335
+3	       1	         1	            3777	          1282
+4	       1	         1	            4177	          1590
+
+![data](https://github.com/deepankarkotnala/LinearRegressionPython/blob/master/data.PNG)
+
+
+### Collecting X and Y items. By using the values of X, we will predict the value of Y.
+X = data['Head Size(cm^3)'].values
+Y = data['Brain Weight(grams)'].values
+
+# Equation of a line is given as: Y = mX + c
+# In order to find the values of m and c, we first need to calculate the mean of X and Y
+mean_x = np.mean(X)
+mean_y = np.mean(Y)
+
+### Total number of values
+n = len(X)
+
+### Calculating the value of m and c using the formula
+Formula : m = [(x - x_bar)* (y - y_bar)] / [ (x - x_bar)^2 ]
+y_bar = (m * x_bar) + c 
+From above equation, we can calculate the value of c as:
+c = y_bar - (m * x_bar)
+where x_bar = mean_x, and y_bar = mean_y
+
+numerator = 0
+denominator = 0
+for i in range(n):
+    numerator   += (X[i] - mean_x) * (Y[i] - mean_y)
+    denominator += (X[i] - mean_x) ** 2
+m = numerator / denominator
+c = mean_y - (m * mean_x)
+
+### Print the coefficients
+print('Value of m: ',m)
+print('Value of c: ',c)
+
+### The value of m and c obtained here will be added to the following equation:
+### BrainWeight = c + m * HeadSize
+
+
+### Plotting the Linear Regression Line
+Now we have the equation of the line. Using this equation, we will find the predicted values of y.
+Once we get all the points, we can plot them and create the Linear Regression Line
+
+### Plotting Values and Linear Regression Line
+max_x = np.max(X) + 100
+min_x = np.min(X) - 100
+### Calculating line values x and y
+x = np.linspace(min_x, max_x, 1000)
+y = c + m * x 
+ 
+### Ploting Line
+plt.plot(x, y, color='#52b920', label='Regression Line')
+### Ploting Scatter Points
+plt.scatter(X, Y, c='#ef4423', label='Scatter Plot')
+ 
+plt.xlabel('Head Size in cm3')
+plt.ylabel('Brain Weight in grams')
+plt.legend()
+plt.show()
