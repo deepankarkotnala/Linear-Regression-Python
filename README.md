@@ -13,7 +13,7 @@ plt.rcParams['figure.figsize'] = (20.0, 10.0)
 data = pd.read_csv('D:\iiitB\Python\Linear Regression Python\headbrain.csv')
 print(data.shape)
 data.head()
-```python
+```
 ![data](https://github.com/deepankarkotnala/LinearRegressionPython/blob/master/data.PNG)
 
 
