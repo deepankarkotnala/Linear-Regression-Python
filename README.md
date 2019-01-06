@@ -12,13 +12,6 @@ data = pd.read_csv('D:\iiitB\Python\Linear Regression Python\headbrain.csv')
 print(data.shape)
 data.head()
 
-      Gender	 Age Range	 Head Size(cm^3)	Brain Weight(grams)
-0	       1	         1	            4512	          1530
-1	       1	         1	            3738	          1297
-2	       1	         1	            4261	          1335
-3	       1	         1	            3777	          1282
-4	       1	         1	            4177	          1590
-
 ![data](https://github.com/deepankarkotnala/LinearRegressionPython/blob/master/data.PNG)
 
 
@@ -77,3 +70,17 @@ plt.xlabel('Head Size in cm3')
 plt.ylabel('Brain Weight in grams')
 plt.legend()
 plt.show()
+
+![graph](https://github.com/deepankarkotnala/LinearRegressionPython/blob/master/graph.PNG)
+
+
+### tot_sumofsq is the total sum of squares and res_sumofsq is the total sum of squares of residuals(relate them to the formula).
+tot_sumofsq = 0
+res_sumofsq = 0
+for i in range(n): #n is the total number of values
+    y_pred = c + m * X[i]
+    tot_sumofsq += (Y[i] - mean_y) ** 2
+    res_sumofsq += (Y[i] - y_pred) ** 2
+    r2 = 1 - (res_sumofsq/tot_sumofsq)
+print(r2)
+
