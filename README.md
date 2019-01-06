@@ -28,11 +28,13 @@ mean_y = np.mean(Y)
 n = len(X)
 
 ### Calculating the value of m and c using the formula
+```txt
 Formula : m = [(x - x_bar)* (y - y_bar)] / [ (x - x_bar)^2 ]
 y_bar = (m * x_bar) + c 
 From above equation, we can calculate the value of c as:
 c = y_bar - (m * x_bar)
 where x_bar = mean_x, and y_bar = mean_y
+```
 
 ```python
 numerator = 0
