@@ -34,15 +34,15 @@ From above equation, we can calculate the value of c as:
 c = y_bar - (m * x_bar)
 where x_bar = mean_x, and y_bar = mean_y
 
+```python
 numerator = 0
 denominator = 0
 for i in range(n):
-
     numerator   += (X[i] - mean_x) * (Y[i] - mean_y)
     denominator += (X[i] - mean_x) ** 2
-    
 m = numerator / denominator
 c = mean_y - (m * mean_x)
+```
 
 ### Print the coefficients
 print('Value of m: ',m)
