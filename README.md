@@ -57,8 +57,8 @@ print('Value of m: ',m)
 print('Value of c: ',c)
 ```
 ### The value of m and c obtained here will be added to the following equation:
-#### BrainWeight = c + m * HeadSize
-
+#### BrainWeight = (m * HeadSize) + c
+#### So, BrainWeight = (0.263 * HeadSize) + 325.57
 
 ### Plotting the Linear Regression Line
 Now we have the equation of the line. Using this equation, we will find the predicted values of y.
