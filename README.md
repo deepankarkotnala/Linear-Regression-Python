@@ -21,7 +21,7 @@ data = pd.read_csv('D:\iiitB\Python\Linear Regression Python\headbrain.csv')
 print(data.shape)
 data.head()
 ```
-![data](https://github.com/deepankarkotnala/LinearRegressionPython/blob/master/data.PNG)
+![data](https://github.com/deepankarkotnala/LinearRegressionPython/blob/master/Images/data.PNG)
 
 
 ### Collecting X and Y items. By using the values of X, we will predict the value of Y.
@@ -94,11 +94,11 @@ plt.legend()
 plt.show()
 ```
 
-![graph](https://github.com/deepankarkotnala/LinearRegressionPython/blob/master/graph.PNG)
+![graph](https://github.com/deepankarkotnala/LinearRegressionPython/blob/master/Images/graph.PNG)
 
 ### R–squared value is the statistical measure to show how close the data are to the fitted regression line.
 R-squared does not indicate whether a regression model is adequate. We an have a low R-squared value for a good model, or a high R-squared value for a model that does not fit the data.
-![r-squared](https://github.com/deepankarkotnala/LinearRegressionPython/blob/master/r-squared.png)
+![r-squared](https://github.com/deepankarkotnala/LinearRegressionPython/blob/master/Images/r-squared.png)
 
 ### tot_sumofsq is the total sum of squares and res_sumofsq is the total sum of squares of residuals(relate them to the formula).
 
