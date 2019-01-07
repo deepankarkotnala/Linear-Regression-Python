@@ -1,4 +1,11 @@
 # Simple Linear Regression Using Python
+### Predicting a response using a single feature.
+It is a method to predict the dependent variable (Y) based on the values of independent variable (X). It is assumed that the two variables are linearly related. Hence, we try to find out a linear function that predicts the response value (y) as accurately as possible as a function of the feature (or independent variable) (x). 
+
+#### How to find the best fit line?
+In this regression model, we are trying to find the "line of best fit" - the regression line which would lead to minimal errors. We are actually trying to minimize the distance between the actual value (y_actual) and the predicted value from our model (y_predicted).
+
+In this regression task, we will predict the "Brain Weight" on the basis of the value of "Head Size".
 
 ### Importing the required libraries
 ```python
